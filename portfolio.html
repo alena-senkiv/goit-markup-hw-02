@@ -5,108 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
     <title>Портфолио</title>
   </head>
 
   <body>
     <!-- Top Line - Navigation panel -->
     <header>
-      <nav>
-        <a href="./" lang="en"><span>Web</span> Studio</a>
-        <ul>
-          <li><a href="./">Студия</a></li>
-          <li><a href="./portfolio.html">Портфолио</a></li>
-          <li><a href="#">Контакты</a></li>
+      <nav class="site-nav">
+        <a class="header-logo" href="./" lang="en"><span class="logo-item">Web</span>&nbsp;Studio</a>
+        <ul class="list">
+          <li><a class="nav-link" href="./">Студия</a></li>
+          <li><a class="nav-link current" href="./portfolio.html">Портфолио</a></li>
+          <li><a class="nav-link" href="#">Контакты</a></li>
         </ul>
       </nav>
 
       <div>
-        <a href="mailto:info@devstudio.com" lang="en">info@devstudio.com</a>
-        <a href="tel:+380961111111">+380961111111</a>
+        <a class="adress-link" href="mailto:info@devstudio.com" lang="en">info@devstudio.com</a>
+        <a class="adress-link" href="tel:+380961111111">+380961111111</a>
       </div>
     </header>
 
     <!-- Main content -->
-    <main>
-      <!-- Sorting options -->
-      <nav>
-        <ul>
-          <li><a href="">Все</a></li>
-          <li><a href="">Веб-сайты</a></li>
-          <li><a href="">Приложения</a></li>
-          <li><a href="">Дизайн</a></li>
-          <li><a href="">Маркетинг</a></li>
-        </ul>
-      </nav>
+    <main class="portfolio">
+      <!-- Filter options -->
+      <div class="filter">
+        <form action="#" method="post">
+          <label class="sort-label" for="all">Все</label><input type="radio" name="filter" id="all" value="Все" class="sort-button" placeholder="Все" checked /> <label class="sort-label" for="web-site">Веб-сайты</label
+          ><input type="radio" name="filter" id="web-site" value="Веб-сайты" class="sort-button" /> <label class="sort-label" for="application">Приложения</label
+          ><input type="radio" name="filter" id="application" value="Приложения" class="sort-button" /> <label class="sort-label" for="design">Дизайн</label><input type="radio" name="filter" id="design" value="Дизайн" class="sort-button" />
+          <label class="sort-label" for="marketing">Маркетинг</label><input type="radio" name="filter" id="marketing" value="Маркетинг" class="button-sort" />
+        </form>
+      </div>
 
       <!-- Projects -->
       <section>
-        <ul>
-          <li>
+        <h1 class="visually-hidden">Наши работы</h1>
+        <ul class="projects-list">
+          <li class="projects-list-item">
             <a href="#">
               <img src="./images/portfolio/project1.jpg" alt="" width="370" height="294" />
-              <h3>Технокряк</h3>
-              <p>Веб-сайт</p>
+              <h2 class="project-title">Технокряк</h2>
+              <p class="project-description">Веб-сайт</p>
+              <p class="project-item-description">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
             </a>
           </li>
-          <li>
+          <li class="projects-list-item">
             <a href="#">
               <img src="./images/portfolio/project2.jpg" alt="" width="370" height="294" />
-              <h3>Постер <span lang="en">New Orlean vs Golden Star</span></h3>
-              <p>Дизайн</p>
+              <h2 class="project-title">Постер <span lang="en">New Orlean vs Golden Star</span></h2>
+              <p class="project-description">Дизайн</p>
+              <p class="project-item-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet inventore voluptate maiores. Sint corrupti recusandae vitae modi deleniti dignissimos vel!</p>
             </a>
           </li>
-          <li>
+          <li class="projects-list-item">
             <a href="#">
               <img src="./images/portfolio/project3.jpg" alt="" width="370" height="294" />
-              <h3>Ресторан <span lang="en">Seafood</span></h3>
-              <p>Приложение</p>
+              <h2 class="project-title">Ресторан <span lang="en">Seafood</span></h2>
+              <p class="project-description">Приложение</p>
+              <p class="project-item-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet inventore voluptate maiores. Sint corrupti recusandae vitae modi deleniti dignissimos vel!</p>
             </a>
           </li>
-          <li>
+          <li class="projects-list-item">
             <a href="#">
               <img src="./images/portfolio/project4.jpg" alt="" width="370" height="294" />
-              <h3>Проект <span lang="en">Prime</span></h3>
-              <p>Маркетинг</p>
+              <h2 class="project-title">Проект <span lang="en">Prime</span></h2>
+              <p class="project-description">Маркетинг</p>
+              <p class="project-item-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet inventore voluptate maiores. Sint corrupti recusandae vitae modi deleniti dignissimos vel!</p>
             </a>
           </li>
-          <li>
+          <li class="projects-list-item">
             <a href="#">
               <img src="./images/portfolio/project5.jpg" alt="" width="370" height="294" />
-              <h3>Проект <span lang="en">Boxes</span></h3>
-              <p>Приложение</p>
+              <h2 class="project-title">Проект <span lang="en">Boxes</span></h2>
+              <p class="project-description">Приложение</p>
+              <p class="project-item-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet inventore voluptate maiores. Sint corrupti recusandae vitae modi deleniti dignissimos vel!</p>
             </a>
           </li>
-          <li>
+          <li class="projects-list-item">
             <a href="#">
               <img src="./images/portfolio/project6.jpg" alt="" width="370" height="294" />
-              <h3 lang="en">Inspiration has no Borders</h3>
-              <p>Веб-сайт</p>
+              <h2 class="project-title" lang="en">Inspiration has no Borders</h2>
+              <p class="project-description">Веб-сайт</p>
+              <p class="project-item-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet inventore voluptate maiores. Sint corrupti recusandae vitae modi deleniti dignissimos vel!</p>
             </a>
           </li>
-          <li>
+          <li class="projects-list-item">
             <a href="#">
               <img src="./images/portfolio/project7.jpg" alt="" width="370" height="294" />
-              <h3>Издание <span lang="en">Limited Edition</span></h3>
-              <p>Дизайн</p>
+              <h2 class="project-title">Издание <span lang="en">Limited Edition</span></h2>
+              <p class="project-description">Дизайн</p>
+              <p class="project-item-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet inventore voluptate maiores. Sint corrupti recusandae vitae modi deleniti dignissimos vel!</p>
             </a>
           </li>
-          <li>
+          <li class="projects-list-item">
             <a href="#">
               <img src="./images/portfolio/project8.jpg" alt="" width="370" height="294" />
-              <h3>Проект <span lang="en">LAB</span></h3>
-              <p>Маркетинг</p>
+              <h2 class="project-title">Проект <span lang="en">LAB</span></h2>
+              <p class="project-description">Маркетинг</p>
+              <p class="project-item-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet inventore voluptate maiores. Sint corrupti recusandae vitae modi deleniti dignissimos vel!</p>
             </a>
           </li>
-          <li>
+          <li class="projects-list-item">
             <a href="#">
               <img src="./images/portfolio/project9.jpg" alt="" width="370" height="294" />
-              <h3 lang="en">Growing Business</h3>
-              <p>Приложение</p>
+              <h2 class="project-title" lang="en">Growing Business</h2>
+              <p class="project-description">Приложение</p>
+              <p class="project-item-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet inventore voluptate maiores. Sint corrupti recusandae vitae modi deleniti dignissimos vel!</p>
             </a>
           </li>
         </ul>
@@ -114,40 +122,56 @@
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer class="site-footer">
       <div>
-        <a href="./" lang="en"><span>Web</span> Studio</a>
-        <address>
+        <a class="footer-logo" href="./" lang="en"><span class="logo-item">Web</span>&nbsp;Studio</a>
+        <address class="footer-adress">
           г. Киев, пр-т Леси Украинки, 26 <br />
-          info@example.com <br />
-          +38 099 111 11 11
+          <a class="footer-adress-link" href="mailto:info@devstudio.com" lang="en">info@devstudio.com</a><br />
+          <a class="footer-adress-link" href="tel:+380961111111">+380961111111</a>
         </address>
       </div>
       <div>
-        <b>Присоединяйтесь</b>
-        <ul>
+        <b class="request">Присоединяйтесь</b>
+        <ul class="social-link">
           <li>
-            <a href="#" target="_blank" rel="noopener nofollow" aria-label="перейти на профиль в instagram">instagram</a>
+            <a href="#" title="instagram" target="_blank" rel="noopener nofollow" aria-label="перейти на профиль в instagram">
+              <svg class="icon">
+                <use href="./images/sprite.svg#insta-icon"></use>
+              </svg>
+            </a>
           </li>
           <li>
-            <a href="#" target="_blank" rel="noopener nofollow" aria-label="перейти на профиль в twitter">twitter</a>
+            <a href="#" title="twitter" target="_blank" rel="noopener nofollow" aria-label="перейти на профиль в twitter">
+              <svg class="icon">
+                <use href="./images/sprite.svg#twitter-icon"></use>
+              </svg>
+            </a>
           </li>
           <li>
-            <a href="#" target="_blank" rel="noopener nofollow" aria-label="перейти на страницу в facebook">facebook</a>
+            <a href="#" title="facebook" target="_blank" rel="noopener nofollow" aria-label="перейти на страницу в facebook">
+              <svg class="icon">
+                <use href="./images/sprite.svg#facebook-icon"></use>
+              </svg>
+            </a>
           </li>
           <li>
-            <a href="#" target="_blank" rel="noopener nofollow" aria-label="перейти на страницу в linkedin">linkedin</a>
+            <a href="#" title="linkedin" target="_blank" rel="noopener nofollow" aria-label="перейти на страницу в linkedin">
+              <svg class="icon">
+                <use href="./images/sprite.svg#linkedin-icon"></use>
+              </svg>
+            </a>
           </li>
         </ul>
       </div>
       <div>
-        <b>Подпишитесь на рассылку</b>
+        <b class="request">Подпишитесь на рассылку</b>
         <form action="#" method="POST">
-          <input type="email" name="" id="" placeholder="E-mail" autocomplete="on" required />
-          <input type="submit" value="Подписаться" />
+          <input class="input-email" type="email" name="" id="" placeholder="E-mail" autocomplete="on" required />
+          <input type="submit" value="Подписаться" class="subscribe-button" />
         </form>
       </div>
-      <p lang="en">2020 | Developed by GoIT Students</p>
+      <p class="copy" lang="en">2020 | Developed by GoIT Students</p>
     </footer>
   </body>
 </html>
