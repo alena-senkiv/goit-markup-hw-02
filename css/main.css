@@ -72,10 +72,7 @@ button {
 }
 
 .adress-link[href^='mailto:']::before {
-  content: url(../images/sprite.svg#envelope-icon);
-  fill: var(--secondary-color);
-  width: 16px;
-  height: 11px;
+  content: '';
 }
 
 .adress-link[href^='tel:']::before {
