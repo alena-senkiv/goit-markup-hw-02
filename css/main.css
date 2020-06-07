@@ -50,7 +50,6 @@ button {
 
 .nav-link,
 .adress-link {
-  color: var(--primary-text-color);
   line-height: 1.1;
   letter-spacing: 0.02em;
   font-weight: 500;
