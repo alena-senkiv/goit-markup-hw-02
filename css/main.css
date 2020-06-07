@@ -305,17 +305,15 @@ button {
 }
 /* Sort button */
 .sort-label {
-  color: var(--primary-text-color);
   background-color: var(--secondary-bg-color);
   font-size: 16px;
   line-height: 1.6;
-  letter-spacing: inherit;
+  font-weight: 500;
   cursor: pointer;
 }
 
 .sort-button:checked + label,
-.sort-button:hover + label,
-.sort-button:focus + label {
+.sort-button:hover + label {
   background-color: var(--accent-color);
 }
 
