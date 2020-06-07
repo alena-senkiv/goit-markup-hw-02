@@ -171,35 +171,16 @@ button {
   color: var(--secondary-color);
 }
 
-.benefits-link::before {
-  width: 270px;
-  height: 120px;
-  display: block;
+.benefits-img {
   background-color: var(--secondary-bg-color);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.attention::before {
-  content: '';
-  background-image: url('../images/icons/antena.svg');
-}
-
-.punctuality::before {
-  content: '';
-  background-image: url('../images/icons/clock.svg');
+  width: 70px;
+  height: 70px;
+  display: block;
+  border-radius: 4px;
+  padding: 25px 100px;
 }
 
-.planning::before {
-  content: '';
-  background-image: url('../images/icons/diagram.svg');
-}
-
-.technology::before {
-  content: '';
-  background-image: url('../images/icons/astronaut.svg');
-}
-
-.benefits-link:hover::before {
+.benefits-item:hover .benefits-img {
   background-color: var(--accent-color);
 }
 
