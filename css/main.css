@@ -267,6 +267,10 @@ button {
   background-color: #188ce8;
 }
 
+.main-button:active {
+  box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
 /* social icons, social icon team*/
 .icon {
   width: 44px;
