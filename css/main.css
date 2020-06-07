@@ -71,6 +71,17 @@ button {
   color: var(--accent-color);
 }
 
+.adress-link[href^='mailto:']::before {
+  content: url(../images/sprite.svg#envelope-icon);
+  fill: var(--secondary-color);
+  width: 16px;
+  height: 11px;
+}
+
+.adress-link[href^='tel:']::before {
+  content: '';
+}
+
 /* Logo */
 .header-logo,
 .header-logo:hover,
@@ -245,7 +256,6 @@ button {
 /* Button */
 
 .main-button,
-.sort-button:checked,
 .subscribe-button {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
@@ -296,12 +306,24 @@ button {
   font-size: 16px;
   line-height: 1.9;
 }
-
+/* Sort button */
 .sort-label {
   color: var(--primary-text-color);
+  background-color: var(--secondary-bg-color);
   font-size: 16px;
   line-height: 1.6;
   letter-spacing: inherit;
+  cursor: pointer;
+}
+
+.sort-button:checked + label,
+.sort-button:hover + label,
+.sort-button:focus + label {
+  background-color: var(--accent-color);
+}
+
+.sort-button {
+  display: none;
 }
 
 .projects-list-item {
