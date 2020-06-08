@@ -1,3 +1,7 @@
+html {
+  box-sizing: border-box;
+}
+
 :root {
   --primary-text-color: #212121;
   --secondary-color: #757575;
@@ -42,7 +46,7 @@ button {
 }
 
 .visually-hidden {
-  display: none;
+  display: none; /* Temporally */
 }
 
 /* HEADER */
@@ -57,6 +61,7 @@ button {
 
 .adress-link {
   color: var(--secondary-color);
+  fill: var(--secondary-color);
 }
 
 .nav-link:hover,
@@ -68,14 +73,17 @@ button {
 .logo-item,
 .current {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
-.adress-link[href^='mailto:']::before {
-  content: '';
+.adress-icon {
+  width: 16px;
+  height: 12px;
 }
 
-.adress-link[href^='tel:']::before {
-  content: '';
+.phone-icon {
+  width: 10px;
+  height: 15px;
 }
 
 /* Logo */
@@ -135,7 +143,7 @@ button {
 .hero {
   background: url(../images/hero.jpg) no-repeat;
   text-align: center;
-  width: 1600px;
+  max-width: 1600px;
   height: 600px;
 }
 
@@ -172,6 +180,7 @@ button {
 }
 
 .benefits-img {
+  box-sizing: content-box;
   background-color: var(--secondary-bg-color);
   width: 70px;
   height: 70px;
@@ -186,8 +195,7 @@ button {
 
 /* Specialisation */
 
-.specialisation-list-item {
-  width: fit-content;
+.specialisation-list-title {
   text-align: center;
 }
 
@@ -199,19 +207,16 @@ button {
 /* Team */
 .team {
   background-color: var(--secondary-bg-color);
-}
-
-.team-list {
-  font-size: 16px;
-  text-transform: capitalize;
   text-align: center;
 }
 
 .team-list-item {
+  font-size: 16px;
+  text-transform: capitalize;
+  text-align: center;
   background-color: var(--primary-white-color);
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  width: fit-content;
 }
 
 .team-list-title {
@@ -236,11 +241,18 @@ button {
 .subscribe-button {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
+
   font-size: 16px;
   font-weight: 700;
   line-height: 1.9;
   letter-spacing: 0.06em;
-  text-align: center;
+
+  /* display: inline-flex;
+  justify-content: center;
+  align-items: center; */
+
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .main-button:hover,
@@ -250,6 +262,13 @@ button {
 
 .main-button:active {
   box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.subscribe-button::after {
+  content: url(../images/icons/send.svg);
+  /* display: block; */
+  margin-top: 13px;
+  margin-left: 10px;
 }
 
 /* social icons, social icon team*/
